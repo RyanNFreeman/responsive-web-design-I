@@ -1,3 +1,475 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+header,
+main,
+footer {
+  max-width: 900px;
+  margin: auto;
+}
+
+@media (max-width: 800px) {
+  header,
+  main,
+  footer {
+    width: 100%;
+  }
+}
+
+header {
+  background-color: white;
+  /* border: 1px solid red; */
+  display: flex;
+  height: 90px;
+  left: 0;
+  padding: 0 10px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+@media (max-width: 800px) {
+  header {
+    flex-wrap: wrap;
+    height: auto;
+    position: relative;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+header nav {
+  align-items: center;
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: space-between;
+  margin-right: 9%;
+  width: 70%;
+}
+
+@media (max-width: 800px) {
+  header nav {
+    justify-content: space-around;
+    margin: 40px 0 0 0;
+    order: 1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  header nav {
+    margin-top: 15px;
+    flex-wrap: wrap;
+  }
+}
+
+header nav a,
+header nav a:hover,
+header nav a:active {
+  color: grey;
+  text-decoration: none;
+}
+
+@media (max-width: 500px) {
+  header nav a {
+    border-top: 1px solid black;
+    font-size: 18px;
+    padding: 22px 0 20px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  header nav a:first-child {
+    margin-top: 20px;
+  }
+
+  header nav a:last-child {
+    border-bottom: 1px solid black;
+  }
+}
+
+header > a {
+  align-self: center;
+  display: block;
+  /* border: 1px solid blue; */
+  height: 40px;
+  width: 22%;
+}
+
+@media (max-width: 800px) {
+  header > a {
+    margin: auto;
+    width: 183px;
+  }
+}
+
+@media (max-width: 500px) {
+  header > a {
+    padding-top: 20px;
+  }
+}
+
+header a img {
+  width: 100%;
+}
+
+main {
+  padding-top: 80px;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  main {
+    padding-top: 0;
+  }
+}
+
+.landing {
+  display: flex;
+  margin: 20px 0 60px 0;
+  /* border: 1px solid red; */
+  /* margin-top: 20px; */
+}
+
+@media (max-width: 800px) {
+  .landing {
+    display: block;
+  }
+}
+
+.landing-text {
+  /* border: 1px solid red; */
+  width: 65%;
+}
+
+@media (max-width: 800px) {
+  .landing-text {
+    width: 100%;
+  }
+}
+
+.landing-text h1 {
+  font-size: 70px;
+  margin-top: 90px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .landing-text h1 {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 500px) {
+  .landing-text h1 {
+    margin-top: 50px;
+  }
+}
+
+.landing-text button {
+  border: 1px solid black;
+  border-radius: 0px;
+  font-size: 18px;
+  display: block;
+  margin: auto;
+  padding: 4px 20px;
+}
+
+@media (max-width: 800px) {
+  .landing-text button {
+    margin-top: 30px;
+    width: 175px;
+  }
+}
+
+.landing-image {
+  /* border: 1px solid red; */
+  width: 45%;
+}
+
+@media (max-width: 800px) {
+  .landing-image {
+    display: none;
+  }
+}
+
+.landing-image img {
+  margin-top: 50px;
+}
+
+.article-top-section {
+  border-top: 2px solid black;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-top: 35px;
+  width: 98%;
+}
+
+@media (max-width: 800px) {
+  .article-top-section {
+    justify-content: space-around;
+    margin-top: 80px;
+    width: 95%;
+  }
+}
+
+@media (max-width: 500px) {
+  .article-top-section {
+    flex-wrap: wrap;
+    padding-top: 10px;
+  }
+}
+
+.article-top-section div {
+  /* border: 1px solid red; */
+  width: 49%;
+}
+
+@media (max-width: 500px) {
+  .article-top-section div {
+    margin-top: 50px;
+    width: 100%;
+  }
+}
+
+article img {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  width: 98%;
+}
+
+@media (max-width: 800px) {
+  article img {
+    margin: auto;
+    margin-top: 40px;
+    width: 95%;
+  }
+}
+
+@media (max-width: 500px) {
+  article img {
+    margin-top: 60px;
+  }
+}
+
+.article-middle-section {
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 40px;
+  width: 98%;
+}
+
+@media (max-width: 800px) {
+  .article-middle-section {
+    justify-content: space-around;
+    margin-top: 30px;
+    padding-bottom: 70px;
+    width: 95%;
+  }
+}
+
+@media (max-width: 500px) {
+  .article-middle-section {
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+  }
+}
+
+.article-middle-section div {
+  width: 33%;
+}
+
+@media (max-width: 800px) {
+  .article-middle-section div {
+    width: 30%;
+  }
+}
+
+@media (max-width: 500px) {
+  .article-middle-section div {
+    width: 100%;
+  }
+
+  .article-middle-section div:nth-child(2),
+  .article-middle-section div:nth-child(3) {
+    margin-top: 80px;
+  }
+}
+
+.article-bottom-section {
+  padding-top: 30px;
+  width: 98%;
+}
+
+@media (max-width: 800px) {
+  .article-bottom-section {
+    margin: auto;
+    width: 95%;
+  }
+}
+
+footer {
+  height: 180px;
+  padding-top: 50px;
+  text-align: center;
+}
